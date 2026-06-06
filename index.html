@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Franciele Mockel · Psicoterapeuta Transformativa</title>
+<meta name="description" content="Franciele Mockel, Psicoterapeuta Transformativa. Um espaço de escuta, cuidado e transformação, com a fé como base. Atendimento online e presencial." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Franciele Mockel · Psicoterapeuta Transformativa" />
+<meta property="og:description" content="Um espaço de escuta, cuidado e transformação, com a fé como base." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/franciele.jpeg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ivory:#FAF6EF;
+    --ivory-2:#F3ECE1;
+    --sand:#E5D8C5;
+    --sage:#8A9A82;
+    --sage-deep:#5F6E58;
+    --gold:#B89150;
+    --ink:#33302B;
+    --ink-soft:#5A554D;
+    --rose:#C9A6A0;
+    --radius:22px;
+    --shadow:0 24px 60px -28px rgba(51,48,43,.40);
+    --maxw:1180px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Jost',sans-serif;
+    color:var(--ink);
+    background:var(--ivory);
+    line-height:1.7;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:400;letter-spacing:-.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:90%;max-width:var(--maxw);margin:0 auto}
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--gold);font-weight:500;
+  }
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    padding:22px 0;transition:.4s ease;
+  }
+  header.nav.scrolled{
+    background:rgba(250,246,239,.85);
+    backdrop-filter:blur(14px);
+    box-shadow:0 1px 0 rgba(51,48,43,.07);
+    padding:14px 0;
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:1.62rem;font-weight:600;letter-spacing:.015em}
+  .brand span{color:var(--gold);font-style:italic;font-weight:500}
+  .nav-links{display:flex;gap:36px;align-items:center}
+  .nav-links a{font-size:.95rem;letter-spacing:.01em;color:var(--ink);transition:.3s;font-weight:400}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-links a.btn{color:#fff}
+  .nav-links a.btn:hover{color:#fff}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--sage-deep);color:#fff;
+    padding:13px 27px;border-radius:100px;
+    font-size:.88rem;letter-spacing:.02em;font-weight:500;
+    transition:.35s ease;border:1px solid transparent;
+  }
+  .btn:hover{background:var(--ink);transform:translateY(-2px)}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:rgba(51,48,43,.22)}
+  .btn.ghost:hover{background:var(--ink);color:var(--ivory)}
+  .nav-toggle{display:none}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:170px 0 90px;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(60% 50% at 78% 18%,rgba(184,145,80,.10),transparent 60%),
+      radial-gradient(55% 60% at 10% 90%,rgba(138,154,130,.16),transparent 60%);
+  }
+  .hero-grid{
+    position:relative;z-index:1;
+    display:grid;grid-template-columns:1.05fr .95fr;
+    gap:60px;align-items:center;
+  }
+  .hero h1{font-size:clamp(2.6rem,5.4vw,4.4rem);line-height:1.04;margin:18px 0 22px}
+  .hero h1 em{font-style:italic;color:var(--sage-deep)}
+  .hero p.lead{font-size:1.12rem;color:var(--ink-soft);max-width:30rem;margin-bottom:34px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+
+  .portrait-wrap{position:relative}
+  .portrait{
+    position:relative;z-index:2;border-radius:260px 260px var(--radius) var(--radius);
+    overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/4.6;
+  }
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:center top}
+  .portrait-wrap::after{
+    content:"";position:absolute;z-index:1;inset:auto -22px -22px auto;
+    width:78%;height:78%;border:1px solid var(--sage);
+    border-radius:220px 220px var(--radius) var(--radius);
+  }
+  .verse-chip{
+    position:absolute;z-index:3;left:-26px;bottom:48px;
+    background:var(--ivory);box-shadow:var(--shadow);
+    border-radius:16px;padding:16px 22px;max-width:230px;
+  }
+  .verse-chip .serif{font-style:italic;font-size:1.02rem;line-height:1.4;color:var(--sage-deep)}
+  .verse-chip small{display:block;margin-top:8px;letter-spacing:.18em;font-size:.62rem;text-transform:uppercase;color:var(--gold)}
+
+  /* ---------- MARQUEE / VALUES ---------- */
+  .strip{background:var(--sage-deep);color:var(--ivory-2);padding:26px 0;margin-top:10px}
+  .strip-inner{display:flex;justify-content:center;gap:54px;flex-wrap:wrap;text-align:center}
+  .strip-inner span{font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;opacity:.92}
+  .strip-inner span::before{content:"✦";color:var(--gold);margin-right:14px;font-style:normal;font-size:.7rem;vertical-align:middle}
+
+  /* ---------- SECTION SHELL ---------- */
+  section.block{padding:100px 0}
+  .section-head{max-width:34rem;margin-bottom:54px}
+  .section-head h2{font-size:clamp(2rem,3.6vw,2.9rem);line-height:1.1;margin:14px 0 0}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--ivory-2)}
+  .about-narrow{max-width:44rem;margin:0 auto;text-align:center}
+  .about-title{font-size:clamp(2rem,3.6vw,2.9rem);margin:14px auto 26px;line-height:1.12;max-width:30rem}
+  .about p{color:var(--ink-soft);margin-bottom:18px;font-size:1.08rem}
+  .about p strong{color:var(--ink);font-weight:400}
+  .signature{font-family:'Fraunces',serif;font-style:italic;font-size:1.5rem;color:var(--sage-deep);margin-top:24px}
+  .subverse{margin-top:34px;font-family:'Fraunces',serif;font-style:italic;color:var(--ink-soft);font-size:1.04rem;opacity:.85}
+  .subverse span{display:block;margin-top:8px;font-family:'Jost',sans-serif;font-style:normal;letter-spacing:.2em;text-transform:uppercase;font-size:.62rem;color:var(--gold)}
+
+  /* ---------- APPROACH ---------- */
+  .approach .section-head{margin-left:auto;margin-right:auto;text-align:center}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .step{
+    background:var(--ivory-2);border-radius:var(--radius);padding:38px 32px;
+    border:1px solid rgba(51,48,43,.05);transition:.4s ease;position:relative;overflow:hidden;
+  }
+  .step:hover{transform:translateY(-6px);box-shadow:var(--shadow);background:#fff}
+  .step .num{font-family:'Fraunces',serif;font-size:2.6rem;color:var(--sand);line-height:1}
+  .step h3{font-size:1.3rem;margin:14px 0 10px}
+  .step p{color:var(--ink-soft);font-size:.98rem}
+
+  /* ---------- HELP / CARDS ---------- */
+  .help{background:var(--ink);color:var(--ivory)}
+  .help .eyebrow{color:var(--gold)}
+  .help .section-head h2{color:var(--ivory)}
+  .help-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);
+    border-radius:18px;padding:30px 26px;transition:.4s ease;
+  }
+  .card:hover{background:rgba(255,255,255,.08);transform:translateY(-4px)}
+  .card .ic{font-size:1.5rem;margin-bottom:14px;display:block}
+  .card h3{font-size:1.18rem;color:var(--ivory);margin-bottom:8px}
+  .card p{color:rgba(250,246,239,.66);font-size:.94rem}
+
+  /* ---------- VERSE BANNER ---------- */
+  .verse-band{background:var(--sage);color:#fff;text-align:center;padding:110px 0}
+  .verse-band .quote{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.3;max-width:46rem;margin:0 auto}
+  .verse-band .ref{margin-top:26px;letter-spacing:.28em;text-transform:uppercase;font-size:.78rem;opacity:.9}
+
+  /* ---------- CREDENTIALS ---------- */
+  .creds{background:var(--ivory-2)}
+  .creds-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .cred-list{list-style:none;margin-top:10px}
+  .cred-list li{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(51,48,43,.10)}
+  .cred-list li:last-child{border-bottom:none}
+  .cred-list .dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:11px}
+  .cred-list h4{font-family:'Fraunces',serif;font-weight:500;font-size:1.08rem}
+  .cred-list p{color:var(--ink-soft);font-size:.92rem}
+  .badge-card{
+    background:var(--sage-deep);color:var(--ivory);border-radius:var(--radius);
+    padding:46px 40px;box-shadow:var(--shadow);
+  }
+  .badge-card .big{font-family:'Fraunces',serif;font-size:3.4rem;line-height:1}
+  .badge-card .big small{font-size:1rem;display:block;letter-spacing:.2em;text-transform:uppercase;opacity:.8;margin-top:6px;font-family:'Jost',sans-serif}
+  .badge-card hr{border:none;border-top:1px solid rgba(255,255,255,.2);margin:26px 0}
+  .badge-card p{opacity:.85;font-size:.96rem}
+
+  /* ---------- CTA ---------- */
+  .cta{text-align:center;padding:120px 0}
+  .cta h2{font-size:clamp(2.1rem,4vw,3.2rem);line-height:1.1;max-width:36rem;margin:18px auto 20px}
+  .cta p{color:var(--ink-soft);max-width:30rem;margin:0 auto 36px;font-size:1.08rem}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:rgba(250,246,239,.7);padding:60px 0 34px}
+  .foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
+  footer .brand{color:var(--ivory)}
+  footer a:hover{color:var(--gold)}
+  .foot-links{display:flex;gap:26px;font-size:.9rem}
+  .foot-bottom{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);font-size:.78rem;letter-spacing:.04em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  /* ---------- WHATSAPP FLOAT ---------- */
+  .wa{
+    position:fixed;right:24px;bottom:24px;z-index:60;
+    display:flex;align-items:center;gap:12px;
+    background:#25D366;color:#fff;padding:14px 22px 14px 16px;border-radius:100px;
+    box-shadow:0 14px 34px -10px rgba(37,211,102,.6);font-weight:400;letter-spacing:.02em;
+    transition:.35s ease;
+  }
+  .wa:hover{transform:translateY(-3px) scale(1.02)}
+  .wa svg{width:24px;height:24px;flex:none}
+  .wa .lbl{font-size:.9rem}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:920px){
+    .hero-grid,.about-grid,.creds-grid{grid-template-columns:1fr;gap:46px}
+    .hero{padding:140px 0 70px}
+    .portrait-wrap{max-width:420px;margin:0 auto}
+    .steps,.help-grid{grid-template-columns:1fr}
+    .nav-links{display:none}
+    .about-img{max-width:440px;margin:0 auto}
+    .badge-card{order:-1}
+    section.block{padding:74px 0}
+  }
+  @media(max-width:520px){
+    .wa .lbl{display:none}
+    .wa{padding:15px;right:18px;bottom:18px}
+    .verse-chip{left:50%;transform:translateX(-50%);bottom:-30px;text-align:center}
+    .strip-inner{gap:28px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <div class="brand">Franciele <span>Mockel</span></div>
+    <nav class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#abordagem">A abordagem</a>
+      <a href="#ajuda">Como posso ajudar</a>
+      <a href="#formacao">Formação</a>
+      <a class="btn" href="#contato">Agendar uma sessão</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Psicoterapeuta Transformativa</span>
+      <h1>Um espaço seguro para você <em>recomeçar por dentro</em>.</h1>
+      <p class="lead">Acolhimento, escuta e cuidado para atravessar a ansiedade, o luto, as feridas do passado e os recomeços, com a fé sustentando todo o processo.</p>
+      <div class="hero-cta">
+        <a class="btn" href="https://wa.me/5541995571024?text=Ol%C3%A1%20Franciele!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener">Agendar uma sessão</a>
+        <a class="btn ghost" href="#sobre">Conhecer Franciele Mockel</a>
+      </div>
+    </div>
+
+    <div class="portrait-wrap reveal">
+      <div class="portrait">
+        <img src="assets/franciele.jpeg" alt="Franciele Mockel, psicoterapeuta transformativa" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="wrap strip-inner">
+    <span>Escuta sem julgamento</span>
+    <span>Cuidado com propósito</span>
+    <span>Fé como base</span>
+    <span>Transformação real</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="block about" id="sobre">
+  <div class="wrap about-narrow reveal">
+    <span class="eyebrow">Quem é a Franciele</span>
+    <h2 class="serif about-title">Cada história merece ser ouvida com cuidado.</h2>
+    <p>Sou a <strong>Franciele Mockel</strong>, psicoterapeuta formada na abordagem <strong>Transformativa</strong>, uma linha de cuidado que enxerga a pessoa por inteiro: emoções, história, relações e espírito.</p>
+    <p>Acredito que ninguém precisa carregar tudo sozinho. No meu consultório, você encontra um lugar livre de julgamento, onde dá pra falar do que dói, entender o que sente e, com tempo e cuidado, <strong>reescrever a forma como vive</strong>.</p>
+    <p>Meu trabalho une o conhecimento da psicoterapia à minha fé. Caminho ao seu lado em busca de uma transformação que vai além do comportamento e alcança quem você é por inteiro.</p>
+    <div class="signature">Franciele Mockel</div>
+    <p class="subverse">“Ele sara os de coração quebrantado e cuida das suas feridas.”<span>Salmos 147:3</span></p>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="block approach" id="abordagem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">A abordagem transformativa</span>
+      <h2>Um caminho de dentro pra fora</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">01</div>
+        <h3>Acolher</h3>
+        <p>O primeiro passo é criar um vínculo de confiança e segurança. Aqui você pode ser você, sem máscaras e sem pressa.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">02</div>
+        <h3>Compreender</h3>
+        <p>Juntos, olhamos para a sua história, suas emoções e os padrões que se repetem, entendendo a raiz, não só o sintoma.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">03</div>
+        <h3>Transformar</h3>
+        <p>A partir desse encontro, novos caminhos se abrem. Você reconstrói sua relação consigo, com o outro e com Deus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HELP -->
+<section class="block help" id="ajuda">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Como posso te ajudar</span>
+      <h2>Cuidado para diferentes momentos da vida</h2>
+    </div>
+    <div class="help-grid">
+      <div class="card reveal"><span class="ic">🤍</span><h3>Ansiedade e estresse</h3><p>Aprenda a entender e acolher o que sente, encontrando equilíbrio e calma para o dia a dia.</p></div>
+      <div class="card reveal"><span class="ic">🌿</span><h3>Luto e perdas</h3><p>Um espaço para atravessar a dor da perda com cuidado, respeito e esperança.</p></div>
+      <div class="card reveal"><span class="ic">🕊️</span><h3>Feridas e traumas</h3><p>Cuidado das memórias e experiências que ainda machucam, para que deixem de governar o presente.</p></div>
+      <div class="card reveal"><span class="ic">💞</span><h3>Relacionamentos e casais</h3><p>Apoio para reconstruir vínculos, melhorar a comunicação e fortalecer a vida a dois.</p></div>
+      <div class="card reveal"><span class="ic">🌅</span><h3>Recomeços e propósito</h3><p>Para momentos de transição, decisões difíceis ou a busca por um novo sentido de vida.</p></div>
+      <div class="card reveal"><span class="ic">✨</span><h3>Autoconhecimento e fé</h3><p>Um caminho de crescimento pessoal e espiritual, alinhando quem você é a quem deseja ser.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VERSE BAND -->
+<section class="verse-band reveal">
+  <div class="wrap">
+    <p class="quote">“Não andeis ansiosos por coisa alguma; em tudo, porém, sejam conhecidas, diante de Deus, as vossas petições.”</p>
+    <div class="ref">Filipenses 4:6</div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="block creds" id="formacao">
+  <div class="wrap creds-grid">
+    <div class="reveal">
+      <span class="eyebrow">Formação & qualificação</span>
+      <h2 class="serif" style="font-size:clamp(2rem,3.6vw,2.9rem);margin:14px 0 10px;line-height:1.1">Preparada para cuidar de você</h2>
+      <ul class="cred-list">
+        <li><span class="dot"></span><div><h4>Formação em Psicoterapia Transformativa</h4><p>Prospera Academy, em parceria com a FIEP, Faculdade Internacional de Evolução Profissional. Curso de extensão universitária.</p></div></li>
+        <li><span class="dot"></span><div><h4>Aliança terapêutica & manejo clínico</h4><p>Vínculo, escuta e condução do processo terapêutico com técnica e sensibilidade.</p></div></li>
+        <li><span class="dot"></span><div><h4>Trauma, ansiedade, depressão e luto</h4><p>Fundamentos de saúde mental aplicada ao cuidado de feridas profundas.</p></div></li>
+        <li><span class="dot"></span><div><h4>Terapia para casais, adolescentes e crianças</h4><p>Cuidado em diferentes fases e relações da vida.</p></div></li>
+      </ul>
+    </div>
+    <div class="badge-card reveal">
+      <div class="big" style="font-size:2.4rem">Abordagem<small>Transformativa</small></div>
+      <hr>
+      <p>Formação concluída com dedicação à psicoterapia transformativa, um cuidado que integra ciência, escuta e fé.</p>
+      <hr>
+      <div class="big" style="font-size:2.2rem">Online &amp; Presencial</div>
+      <p style="margin-top:8px">Atendimento de onde você estiver, no seu tempo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="block cta" id="contato">
+  <div class="wrap reveal">
+    <span class="eyebrow">O primeiro passo é uma conversa</span>
+    <h2 class="serif">Você não precisa atravessar isso sozinho.</h2>
+    <p>Dê o primeiro passo hoje. Me chame no WhatsApp e vamos conversar sobre como começar o seu processo de cuidado.</p>
+    <a class="btn" style="padding:16px 34px;font-size:.95rem" href="https://wa.me/5541995571024?text=Ol%C3%A1%20Franciele!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener">Falar com Franciele Mockel</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="font-size:1.3rem">Franciele <span style="color:var(--gold)">Mockel</span></div>
+        <p style="margin-top:10px;max-width:22rem;font-size:.92rem">Psicoterapeuta Transformativa. Um espaço de escuta, cuidado e transformação, com a fé como base.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#abordagem">Abordagem</a>
+        <a href="#ajuda">Como ajudo</a>
+        <a href="https://www.instagram.com/psicoterapeuta.franmockel/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Franciele Mockel · Psicoterapeuta Transformativa</span>
+      <span>WhatsApp (41) 99557-1024</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa" href="https://wa.me/5541995571024?text=Ol%C3%A1%20Franciele!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.512 5.26l-.999 3.648 3.746-.967zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+  <span class="lbl">Agendar uma sessão</span>
+</a>
+
+<script>
+  // nav scroll state
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  // reveal on scroll
+  const io=new IntersectionObserver((es)=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.16});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*90)+'ms';io.observe(el);});
+</script>
+</body>
+</html>
