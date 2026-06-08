@@ -4,7 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Franciele Mockel · Psicoterapeuta Transformativa</title>
-<meta name="description" content="Franciele Mockel, Psicoterapeuta Transformativa. Um espaço de escuta, cuidado e transformação, com a fé como base. Atendimento online e presencial." />
+<meta name="description" content="Franciele Mockel, Psicoterapeuta Transformativa. Acolhimento e cuidado para mulheres e mães que buscam equilíbrio emocional e transformação de dentro para fora, com a fé como base. Atendimento online." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/favicon.png" />
 
 <!-- SEO -->
 <link rel="canonical" href="https://www.francielemockel.com.br/" />
@@ -16,17 +20,17 @@
 <!-- Open Graph -->
 <meta property="og:site_name" content="Franciele Mockel" />
 <meta property="og:title" content="Franciele Mockel · Psicoterapeuta Transformativa" />
-<meta property="og:description" content="Um espaço de escuta, cuidado e transformação, com a fé como base. Atendimento online e presencial." />
+<meta property="og:description" content="Acolhimento e cuidado para mulheres e mães que buscam equilíbrio emocional e transformação de dentro para fora, com a fé como base. Atendimento online." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.francielemockel.com.br/" />
 <meta property="og:locale" content="pt_BR" />
-<meta property="og:image" content="https://www.francielemockel.com.br/assets/franciele.jpeg" />
+<meta property="og:image" content="https://www.francielemockel.com.br/assets/franciele.png" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Franciele Mockel · Psicoterapeuta Transformativa" />
-<meta name="twitter:description" content="Um espaço de escuta, cuidado e transformação, com a fé como base." />
-<meta name="twitter:image" content="https://www.francielemockel.com.br/assets/franciele.jpeg" />
+<meta name="twitter:description" content="Acolhimento e cuidado para mulheres e mães, com a fé como base. Atendimento online." />
+<meta name="twitter:image" content="https://www.francielemockel.com.br/assets/franciele.png" />
 
 <!-- Dados estruturados (Google) -->
 <script type="application/ld+json">
@@ -34,17 +38,13 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Franciele Mockel, Psicoterapeuta Transformativa",
-  "description": "Psicoterapeuta Transformativa. Um espaço de escuta, acolhimento e cuidado emocional para ansiedade, luto, traumas, relacionamentos e recomeços, unindo psicoterapia e fé. Atendimento online e presencial.",
+  "description": "Psicoterapeuta Transformativa. Acolhimento e cuidado para mulheres e mães que buscam equilíbrio emocional, fortalecimento interior e transformação de dentro para fora, unindo psicoterapia e fé. Atendimento online.",
   "url": "https://www.francielemockel.com.br/",
-  "image": "https://www.francielemockel.com.br/assets/franciele.jpeg",
+  "image": "https://www.francielemockel.com.br/assets/franciele.png",
   "telephone": "+5541995571024",
   "priceRange": "$$",
   "availableLanguage": "Portuguese",
-  "areaServed": [
-    { "@type": "City", "name": "Curitiba" },
-    { "@type": "City", "name": "São José dos Pinhais" },
-    { "@type": "Country", "name": "Brasil" }
-  ],
+  "areaServed": { "@type": "Country", "name": "Brasil" },
   "sameAs": [
     "https://www.instagram.com/psicoterapeuta.franmockel/"
   ],
@@ -53,7 +53,7 @@
     "name": "Franciele Mockel",
     "jobTitle": "Psicoterapeuta Transformativa"
   },
-  "knowsAbout": ["Ansiedade", "Luto", "Trauma", "Terapia de casais", "Autoconhecimento", "Saúde mental"]
+  "knowsAbout": ["Regulação emocional", "Maternidade", "Autoestima", "Relacionamentos", "Sobrecarga emocional", "Autoconhecimento"]
 }
 </script>
 
@@ -113,8 +113,11 @@
     padding:14px 0;
   }
   .nav-inner{display:flex;align-items:center;justify-content:space-between}
-  .brand{font-family:'Cormorant Garamond',serif;font-size:1.62rem;font-weight:600;letter-spacing:.015em}
-  .brand span{color:var(--gold);font-style:italic;font-weight:500}
+  .brand{display:inline-flex;align-items:center;line-height:0}
+  .brand img{height:62px;width:auto;display:block;transition:.4s ease}
+  header.nav.scrolled .brand img{height:46px}
+  footer .brand{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.2;display:block}
+  footer .brand span{color:var(--gold);font-style:italic;font-weight:500}
   .nav-links{display:flex;gap:36px;align-items:center}
   .nav-links a{font-size:.95rem;letter-spacing:.01em;color:var(--ink);transition:.3s;font-weight:400}
   .nav-links a:hover{color:var(--gold)}
@@ -274,9 +277,12 @@
     .about-img{max-width:440px;margin:0 auto}
     .badge-card{order:-1}
     section.block{padding:74px 0}
+    .brand img{height:50px}
+    header.nav.scrolled .brand img{height:42px}
   }
   @media(max-width:520px){
     .wa .lbl{display:none}
+    .brand img{height:44px}
     .wa{padding:15px;right:18px;bottom:18px}
     .verse-chip{left:50%;transform:translateX(-50%);bottom:-30px;text-align:center}
     .strip-inner{gap:28px}
@@ -288,7 +294,7 @@
 <!-- NAV -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <div class="brand">Franciele <span>Mockel</span></div>
+    <a class="brand" href="#inicio" aria-label="Franciele Mockel, voltar ao início"><img src="assets/logo.png" alt="Franciele Mockel, Psicoterapeuta Transformativa" /></a>
     <nav class="nav-links">
       <a href="#sobre">Sobre</a>
       <a href="#abordagem">A abordagem</a>
@@ -300,12 +306,12 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="inicio">
   <div class="wrap hero-grid">
     <div class="hero-copy reveal">
       <span class="eyebrow">Psicoterapeuta Transformativa</span>
       <h1>Um espaço seguro para você <em>recomeçar por dentro</em>.</h1>
-      <p class="lead">Acolhimento, escuta e cuidado para atravessar a ansiedade, o luto, as feridas do passado e os recomeços, com a fé sustentando todo o processo.</p>
+      <p class="lead">Acolhimento, escuta e cuidado para mulheres e mães que buscam equilíbrio emocional, fortalecimento interior e transformação de dentro para fora, com a fé sustentando todo o processo.</p>
       <div class="hero-cta">
         <a class="btn" href="https://wa.me/5541995571024?text=Ol%C3%A1%20Franciele%20Mockel!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener">Agendar uma sessão</a>
         <a class="btn ghost" href="#sobre">Conhecer Franciele Mockel</a>
@@ -314,7 +320,7 @@
 
     <div class="portrait-wrap reveal">
       <div class="portrait">
-        <img src="assets/franciele.jpeg" alt="Franciele Mockel, psicoterapeuta transformativa" />
+        <img src="assets/franciele.png" alt="Franciele Mockel, psicoterapeuta transformativa" />
       </div>
     </div>
   </div>
@@ -335,9 +341,9 @@
   <div class="wrap about-narrow reveal">
     <span class="eyebrow">Quem é a Franciele</span>
     <h2 class="serif about-title">Cada história merece ser ouvida com cuidado.</h2>
-    <p>Sou a <strong>Franciele Mockel</strong>, psicoterapeuta formada na abordagem <strong>Transformativa</strong>, uma linha de cuidado que enxerga a pessoa por inteiro: emoções, história, relações e espírito.</p>
-    <p>Acredito que ninguém precisa carregar tudo sozinho. No meu consultório, você encontra um lugar livre de julgamento, onde dá pra falar do que dói, entender o que sente e, com tempo e cuidado, <strong>reescrever a forma como vive</strong>.</p>
-    <p>Meu trabalho une o conhecimento da psicoterapia à minha fé. Caminho ao seu lado em busca de uma transformação que vai além do comportamento e alcança quem você é por inteiro.</p>
+    <p>Sou a <strong>Franciele Mockel</strong>, psicoterapeuta formada na abordagem <strong>Transformativa</strong>, uma linha de cuidado que enxerga a pessoa por inteiro: emoções, corpo, alma e espírito.</p>
+    <p>Acredito que ninguém precisa carregar tudo sozinha. No meu consultório, você encontra um lugar livre de julgamento, onde você pode falar do que dói, entender o que sente e, com tempo e cuidado, <strong>escrever uma nova história</strong>.</p>
+    <p>A Psicoterapia Transformativa considera a mulher de forma integral, acolhendo emoções, relacionamentos e espiritualidade. Um caminho de autoconhecimento e fortalecimento emocional que promove uma transformação profunda, de dentro para fora.</p>
     <div class="signature">Franciele Mockel</div>
     <p class="subverse">“Ele sara os de coração quebrantado e cuida das suas feridas.”<span>Salmos 147:3</span></p>
   </div>
@@ -378,12 +384,12 @@
       <h2>Cuidado para diferentes momentos da vida</h2>
     </div>
     <div class="help-grid">
-      <div class="card reveal"><span class="ic">🤍</span><h3>Ansiedade e estresse</h3><p>Aprenda a entender e acolher o que sente, encontrando equilíbrio e calma para o dia a dia.</p></div>
-      <div class="card reveal"><span class="ic">🌿</span><h3>Luto e perdas</h3><p>Um espaço para atravessar a dor da perda com cuidado, respeito e esperança.</p></div>
-      <div class="card reveal"><span class="ic">🕊️</span><h3>Feridas e traumas</h3><p>Cuidado das memórias e experiências que ainda machucam, para que deixem de governar o presente.</p></div>
-      <div class="card reveal"><span class="ic">💞</span><h3>Relacionamentos e casais</h3><p>Apoio para reconstruir vínculos, melhorar a comunicação e fortalecer a vida a dois.</p></div>
-      <div class="card reveal"><span class="ic">🌅</span><h3>Recomeços e propósito</h3><p>Para momentos de transição, decisões difíceis ou a busca por um novo sentido de vida.</p></div>
-      <div class="card reveal"><span class="ic">✨</span><h3>Autoconhecimento e fé</h3><p>Um caminho de crescimento pessoal e espiritual, alinhando quem você é a quem deseja ser.</p></div>
+      <div class="card reveal"><span class="ic">🌿</span><h3>Regulação emocional</h3><p>Aprenda a compreender suas emoções, responder com mais consciência e encontrar equilíbrio diante dos desafios da vida.</p></div>
+      <div class="card reveal"><span class="ic">🌷</span><h3>Maternidade real</h3><p>Um espaço para acolher as demandas da maternidade, a culpa materna, a sobrecarga mental e os desafios de criar filhos sem se perder de si mesma.</p></div>
+      <div class="card reveal"><span class="ic">🦋</span><h3>Identidade e autoestima</h3><p>Fortaleça sua autoestima, reconheça seu valor e reconecte-se com quem você é além dos papéis que exerce.</p></div>
+      <div class="card reveal"><span class="ic">🌻</span><h3>Relacionamentos</h3><p>Compreenda padrões, fortaleça limites saudáveis e desenvolva relações mais conscientes e equilibradas.</p></div>
+      <div class="card reveal"><span class="ic">🍃</span><h3>Sobrecarga emocional</h3><p>Para mulheres que se sentem cansadas de carregar tudo sozinhas e desejam viver com mais leveza, clareza e equilíbrio.</p></div>
+      <div class="card reveal"><span class="ic">✨</span><h3>Mulher e seus múltiplos papéis</h3><p>Para mulheres que desejam conciliar maternidade, família, trabalho e vida pessoal sem abrir mão de si mesmas.</p></div>
     </div>
   </div>
 </section>
@@ -404,9 +410,6 @@
       <h2 class="serif" style="font-size:clamp(2rem,3.6vw,2.9rem);margin:14px 0 10px;line-height:1.1">Preparada para cuidar de você</h2>
       <ul class="cred-list">
         <li><span class="dot"></span><div><h4>Formação em Psicoterapia Transformativa</h4><p>Prospera Academy, em parceria com a FIEP, Faculdade Internacional de Evolução Profissional. Curso de extensão universitária.</p></div></li>
-        <li><span class="dot"></span><div><h4>Aliança terapêutica & manejo clínico</h4><p>Vínculo, escuta e condução do processo terapêutico com técnica e sensibilidade.</p></div></li>
-        <li><span class="dot"></span><div><h4>Trauma, ansiedade, depressão e luto</h4><p>Fundamentos de saúde mental aplicada ao cuidado de feridas profundas.</p></div></li>
-        <li><span class="dot"></span><div><h4>Terapia para casais, adolescentes e crianças</h4><p>Cuidado em diferentes fases e relações da vida.</p></div></li>
       </ul>
     </div>
     <div class="badge-card reveal">
@@ -414,8 +417,7 @@
       <hr>
       <p>Formação concluída com dedicação à psicoterapia transformativa, um cuidado que integra ciência, escuta e fé.</p>
       <hr>
-      <div class="big" style="font-size:2.2rem">Online &amp; Presencial</div>
-      <p style="margin-top:8px">Atendimento de onde você estiver, no seu tempo.</p>
+      <div class="big" style="font-size:2.2rem">Atendimento<small>online</small></div>
     </div>
   </div>
 </section>
@@ -424,7 +426,7 @@
 <section class="block cta" id="contato">
   <div class="wrap reveal">
     <span class="eyebrow">O primeiro passo é uma conversa</span>
-    <h2 class="serif">Você não precisa atravessar isso sozinho.</h2>
+    <h2 class="serif">Você não precisa atravessar isso sozinha.</h2>
     <p>Dê o primeiro passo hoje. Me chame no WhatsApp e vamos conversar sobre como começar o seu processo de cuidado.</p>
     <a class="btn" style="padding:16px 34px;font-size:.95rem" href="https://wa.me/5541995571024?text=Ol%C3%A1%20Franciele%20Mockel!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener">Falar com Franciele Mockel</a>
   </div>
